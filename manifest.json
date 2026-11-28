@@ -1,0 +1,42 @@
+{
+  "version": "2026.11.28.1623",
+  "files": {
+    "Nagenli-Setup.exe": {
+      "size": 18980352,
+      "sha256": "fa979ee038eeff8e8829fbd1964bb97cc1a1fdece640899b46d92d8b3b16464f"
+    },
+    "Nagenli-TV-Kit.zip": {
+      "size": 2105343,
+      "sha256": "c51722cff71228db17927c9ddd379714fe0b69cfb33ad9ad457443d1bb7871f8"
+    },
+    "Nagenli.apk": {
+      "size": 13228122,
+      "sha256": "f0185dd10b892b866753509be959f686ac05356f3f1b7748bf8880733224049e",
+      "code": 477623
+    },
+    "Nagenli.wgt": {
+      "size": 181770,
+      "sha256": "c0ea38b330902815ebe019e6c1186b0df9f8be09159b9462f58734f390d6dee4"
+    },
+    "nagenli-linux-amd64": {
+      "size": 18461119,
+      "sha256": "9a5de24ff4dff174e663ef457018530a5504ad566dd1df15249aea630610344d"
+    },
+    "nagenli-linux-arm64": {
+      "size": 17477829,
+      "sha256": "dcc7b280e4b524af78b207fc6b416fb45e6c1216345e54a71aabb4a9f509f44d"
+    },
+    "nagenli-mac-amd64": {
+      "size": 18884848,
+      "sha256": "a34b4503a454b4cba64e1bbd9ba58196d5b2d6918fc71f8206e220a286bd43f7"
+    },
+    "nagenli-mac-arm64": {
+      "size": 17950194,
+      "sha256": "9a4ef58c7daef1f6ea12fdbc1e63f25ef8e165be8a22b4ad5538ad6d2289aa29"
+    },
+    "nagenli.exe": {
+      "size": 18980352,
+      "sha256": "fa979ee038eeff8e8829fbd1964bb97cc1a1fdece640899b46d92d8b3b16464f"
+    }
+  }
+}

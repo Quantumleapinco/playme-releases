@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Nagenli ל־Nvidia Shield</title>
+<link rel="alternate" hreflang="en" href="https://quantumleapinco.github.io/nagenli-releases/nvidia-shield.html">
+<link rel="alternate" hreflang="he" href="https://quantumleapinco.github.io/nagenli-releases/nvidia-shield-he.html">
+<link rel="alternate" hreflang="x-default" href="https://quantumleapinco.github.io/nagenli-releases/nvidia-shield.html">
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #0b0b0f; --card: #16161f; --card2: #1f1f2c;
+  --text: #ececf5; --muted: #b4b4c6; --accent: #c4b2ff;
+  --btn: #6a47f5; --btn-text: #ffffff; --edge: #8a8aa6; --soft: #34344a;
+  --focus: #ffd23f; --ok: #7bd88f;
+}
+@font-face { font-family: Inter; font-weight: 300 800; font-display: swap; src: url(inter-latin.09afbeff.woff2) format("woff2"); }
+@font-face { font-family: Heebo; font-weight: 100 900; font-display: swap; src: url(heebo-hebrew.61783df9.woff2) format("woff2"); unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 18px/1.6 Heebo, Inter, "Segoe UI", "Arial Hebrew", Arial, system-ui, sans-serif; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: #ffffff; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+.sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; inset-inline-start: 12px; top: -80px; z-index: 10; background: var(--focus); color: #000; font-weight: 700; padding: 12px 18px; border-radius: 10px; text-decoration: none; min-height: 48px; display: inline-flex; align-items: center; }
+.skip:focus { top: 12px; }
+.wrap { max-width: 740px; margin: 0 auto; padding: 0 16px; }
+header.top { padding: 12px 0 0; }
+header.top .wrap { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; }
+.brand { font-weight: 800; font-size: 20px; letter-spacing: .2px; color: var(--text); text-decoration: none; display: inline-flex; align-items: center; min-height: 48px; }
+nav.bar { display: flex; flex-wrap: wrap; gap: 4px 8px; }
+nav.bar a { display: inline-flex; align-items: center; min-height: 48px; padding: 0 14px; border: 2px solid var(--edge); border-radius: 12px; color: var(--text); text-decoration: none; font-weight: 600; }
+nav.bar a:hover { border-color: var(--accent); }
+nav.bar a.lang { background: var(--card2); }
+main { padding: 8px 0 56px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 20px 0 12px; font-weight: 800; }
+h2 { font-size: 24px; line-height: 1.3; margin: 44px 0 10px; color: var(--accent); }
+h3 { font-size: 20px; line-height: 1.35; margin: 0 0 6px; color: #ffffff; }
+p { margin: 10px 0; max-width: 62ch; }
+.promise { font-size: 21px; line-height: 1.5; color: var(--text); margin: 0 0 6px; max-width: 56ch; }
+.time { display: inline-flex; align-items: center; gap: 8px; margin: 10px 0 0; padding: 8px 16px; background: var(--card2); border: 2px solid var(--edge); border-radius: 999px; font-weight: 600; }
+.time svg { width: 22px; height: 22px; flex: none; }
+.lead { color: var(--muted); }
+ul.checks, ul.plain { list-style: none; padding: 0; margin: 10px 0; }
+ul.checks li { position: relative; padding: 10px 0; padding-inline-start: 44px; max-width: 62ch; }
+ul.checks li::before { content: ""; position: absolute; inset-inline-start: 4px; top: 13px; width: 24px; height: 24px; border: 3px solid var(--edge); border-radius: 7px; background: var(--card); }
+ul.plain li { padding: 6px 0; max-width: 62ch; }
+ol.steps { list-style: none; padding: 0; margin: 16px 0; }
+ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 56px 1fr; gap: 0 16px; background: var(--card); border: 2px solid var(--soft); border-radius: 18px; padding: 18px 16px; margin: 16px 0; break-inside: avoid; }
+ol.steps > li::before { content: counter(s); display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 50%; background: var(--btn); color: var(--btn-text); font-weight: 800; font-size: 24px; line-height: 1; }
+.sb { min-width: 0; }
+#steps:focus { outline: none; }
+.sb p { margin: 8px 0; }
+.see { margin: 12px 0 0; padding: 10px 14px; border-inline-start: 5px solid var(--ok); background: var(--card2); border-radius: 8px; max-width: 62ch; }
+.lab { display: block; font-size: 17px; font-weight: 800; letter-spacing: .4px; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.see .lab { color: var(--ok); }
+.tip { margin: 12px 0 0; padding: 10px 14px; border: 2px dashed var(--edge); border-radius: 12px; max-width: 62ch; }
+.tip .lab { color: var(--accent); }
+.tip p { margin: 4px 0; }
+.note { background: var(--card); border: 2px solid var(--soft); border-radius: 14px; padding: 12px 16px; margin: 16px 0; color: var(--text); max-width: 62ch; }
+.note p { margin: 6px 0; }
+b { color: #ffffff; }
+bdi.ui, bdi.en { unicode-bidi: isolate; }
+kbd { display: inline-block; min-width: 34px; text-align: center; background: var(--card2); border: 2px solid var(--edge); border-bottom-width: 4px; border-radius: 8px; padding: 0 8px; font: 600 17px/1.5 Consolas, Menlo, "DejaVu Sans Mono", monospace; direction: ltr; unicode-bidi: isolate; }
+code { background: var(--card2); border-radius: 6px; padding: 1px 7px; font: 17px/1.5 Consolas, Menlo, "DejaVu Sans Mono", monospace; direction: ltr; unicode-bidi: isolate; overflow-wrap: anywhere; }
+.cmdbox { margin: 14px 0; border: 2px solid var(--edge); border-radius: 14px; background: var(--card2); padding: 12px; max-width: 62ch; }
+.cmdbox .cmdlab { margin: 0 0 6px; font-weight: 700; color: var(--muted); font-size: 17px; }
+.cmdbox code.cmd { display: block; background: #0b0b0f; padding: 12px 14px; border-radius: 10px; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; user-select: all; font-size: 18px; text-align: left; }
+.btn, .copy { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 56px; padding: 10px 24px; border-radius: 14px; border: 2px solid var(--btn); background: var(--btn); color: var(--btn-text); font: inherit; font-weight: 700; font-size: 19px; text-decoration: none; cursor: pointer; text-align: center; }
+.btn:hover, .copy:hover { background: #5a37e0; color: #ffffff; border-color: #c4b2ff; }
+.btn { width: 100%; max-width: 62ch; margin: 10px 0; }
+.btn > span { min-width: 0; }
+.nb { white-space: nowrap; }
+.btn small { display: block; font-weight: 500; font-size: 17px; opacity: 1; }
+.btn svg { width: 28px; height: 28px; flex: none; }
+.copy { display: none; width: 100%; margin-top: 10px; }
+.js .copy { display: inline-flex; }
+.copy svg { width: 24px; height: 24px; flex: none; }
+.copy.done { background: #14532d; border-color: var(--ok); }
+svg { direction: ltr; }
+fig, figure { margin: 14px 0; }
+figure.pic { margin: 16px 0; max-width: 62ch; }
+figure.pic svg { width: 100%; height: auto; max-height: 300px; background: var(--card2); border-radius: 14px; border: 2px solid var(--soft); }
+figcaption { color: var(--muted); font-size: 17px; margin-top: 6px; }
+details { border: 2px solid var(--edge); border-radius: 14px; margin: 10px 0; background: var(--card); max-width: 62ch; }
+details > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; padding: 10px 16px; font-weight: 700; border-radius: 12px; }
+details > summary::-webkit-details-marker { display: none; }
+details > summary::after { content: ""; flex: none; width: 12px; height: 12px; border-inline-end: 3px solid var(--accent); border-bottom: 3px solid var(--accent); transform: rotate(45deg); margin-inline-start: 8px; margin-top: -4px; }
+details[open] > summary::after { transform: rotate(-135deg); margin-top: 4px; }
+details[open] > summary { border-bottom: 2px solid var(--soft); border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+details > div { padding: 4px 16px 14px; }
+.stuck { margin-top: 48px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; margin: 14px 0; }
+a.card { display: flex; align-items: center; gap: 16px; min-height: 96px; background: var(--card); border: 2px solid var(--edge); border-radius: 18px; padding: 14px 16px; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 20px; }
+a.card:hover { border-color: var(--accent); background: var(--card2); }
+a.card svg { width: 60px; height: 60px; flex: none; color: var(--accent); }
+a.card small { display: block; font-weight: 500; font-size: 17px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+.qr { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; margin: 18px 0; }
+.qr svg { width: 168px; height: 168px; flex: none; border-radius: 12px; }
+.qr p { margin: 0; flex: 1 1 220px; min-width: 0; overflow-wrap: anywhere; }
+footer { border-top: 2px solid var(--soft); padding: 22px 0 40px; color: var(--muted); font-size: 17px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+footer a { display: inline-flex; align-items: center; min-height: 48px; }
+@media (max-width: 480px) {
+  h1 { font-size: 29px; }
+  ol.steps > li { grid-template-columns: 1fr; padding: 14px 14px; }
+  ol.steps > li::before { margin-bottom: 8px; }
+  .promise { font-size: 19px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn, .copy, a.card, nav.bar a { transition: background-color .15s, border-color .15s; }
+  details > summary::after { transition: transform .15s; }
+}
+@media print {
+  :root { --bg: #ffffff; --card: #ffffff; --card2: #f1f1f5; --text: #000000; --muted: #333333; --accent: #3b1fa8; --btn: #3b1fa8; --edge: #555555; --soft: #999999; --ok: #14532d; --focus: #000000; }
+  body { background: #fff; color: #000; font-size: 12pt; }
+  .skip, nav.bar, .copy { display: none !important; }
+  b, h3 { color: #000; }
+  a, a:hover { color: #3b1fa8; }
+  .btn, .btn:hover { background: #fff; color: #000; border: 2px solid #000; }
+  .btn::after { content: " " attr(href); font-size: 10pt; font-weight: 400; word-break: break-all; }
+  ol.steps > li, .note, .tip, .see, details, .cmdbox { break-inside: avoid; page-break-inside: avoid; }
+  ol.steps > li::before { background: #3b1fa8; color: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cmdbox code.cmd { background: #f1f1f5; border: 1px solid #999; }
+  details > summary::after { display: none; }
+  h2 { break-after: avoid; }
+  figure.pic svg { background: #fff; max-height: 240px; }
+  .qr svg { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#steps">דלגו אל השלבים</a>
+<header class="top"><div class="wrap"><a class="brand" href="index-he.html">Nagenli</a><nav class="bar" aria-label="דפים ושפה"><a href="index-he.html">כל המכשירים</a><a class="lang" href="nvidia-shield.html" hreflang="en" lang="en">English</a></nav></div></header>
+<main id="main"><div class="wrap">
+<h1>Nagenli ל־Nvidia Shield</h1>
+<p class="promise">בסוף Nagenli הוא אפליקציה ב־Shield ומציג את הספרייה מהמחשב שלכם. זה המדריך ל־Android TV, מסופר עבור ה־Shield. קודם מתקינים את Nagenli במחשב.</p>
+<p class="time"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="24"/><path d="M32 18v15l9 6"/></svg><span>כ־10 דקות</span></p>
+<section aria-labelledby="need"><h2 id="need">מה צריך</h2><ul class="checks"><li>Nagenli כבר מותקן במחשב שלכם, והמחשב דלוק</li><li>ה־Shield מחובר לטלוויזיה ולאותה רשת ביתית כמו המחשב</li><li>השלט של ה־Shield, והכתובת של המחשב (שלב 1 מראה איפה)</li><li>טלפון שכבר מחובר ל־Nagenli, אם רוצים להתחבר בקוד תמונה</li></ul></section>
+<div id="live" class="sr" role="status" aria-live="polite"></div>
+<div id="steps" tabindex="-1"><div class="note"><p>בטלפון או בטאבלט? <a href="android-he.html">השתמשו במדריך לטלפון Android</a>: האפליקציה שם מגיעה מ־Google Play.</p></div><h2>התקנה</h2><p class="lead">אם המכשיר שלכם מוגדר בעברית, הכפתורים שמוזכרים כאן באנגלית יופיעו אצלכם בעברית. חפשו את אותה משמעות.</p><ol class="steps" role="list" start="1" style="counter-reset:s 0"><li><div class="sb"><h3>רשמו את הכתובת של המחשב שלכם</h3><div>ב־Nagenli במחשב, תחת <b>הגדרות</b> (<bdi class="en" lang="en" dir="ltr">Settings</bdi>), יש כתובת כמו <code dir="ltr" lang="en">http://192.168.1.20:8686</code>. רשמו אותה או שמרו אותה בטלפון.</div><p class="see"><span class="lab">מה תראו</span>כתובת שמתחילה ב־<code dir="ltr" lang="en">http://</code> ונגמרת ב־<code dir="ltr" lang="en">:8686</code>.</p></div></li><li><div class="sb"><h3>התקינו את Downloader מ־Google Play</h3><div>בטלוויזיה פתחו את <b><bdi class="ui" lang="en" dir="ltr">Google Play</bdi></b>, חפשו את <b>Downloader</b> (של AFTVnews, סמל כתום) והתקינו אותו. Downloader הוא כלי עזר חינמי שמוריד קובץ מכתובת.</div><p class="see"><span class="lab">מה תראו</span>Downloader במסך הבית של הטלוויזיה או באפליקציות שלה.</p></div></li><li><div class="sb"><h3>אפשרו ל־Downloader להתקין אפליקציות</h3><div>עושים את זה עכשיו כדי שה־Shield לא יסרב אחר כך. ברוב מכשירי ה־Shield פתחו את <b><bdi class="ui" lang="en" dir="ltr">Settings</bdi></b>, ואז <b><bdi class="ui" lang="en" dir="ltr">Device Preferences</bdi></b>, ואז <b><bdi class="ui" lang="en" dir="ltr">Security &amp; restrictions</bdi></b>, ואז <b><bdi class="ui" lang="en" dir="ltr">Unknown sources</bdi></b>, והפעילו את <b><bdi class="ui" lang="en" dir="ltr">Downloader</bdi></b>. התפריטים שונים מעט בין גרסאות: אם לא מוצאים, חפשו “<bdi class="en" lang="en" dir="ltr">Unknown sources</bdi>” בהגדרות, או דלגו על השלב הזה ועשו זאת כש־Shield יבקש (שלב 5).</div><p class="see"><span class="lab">מה תראו</span>רשימת אפליקציות, ולצד Downloader מתג.</p></div></li><li><div class="sb"><h3>פתחו את Downloader והקלידו את הכתובת</h3><div>בתיבת הכתובת הקלידו את הכתובת של המחשב ואחריה <code dir="ltr" lang="en">/app/Nagenli.apk</code>, ובחרו <b><bdi class="ui" lang="en" dir="ltr">Go</bdi></b>. משתמשים במקלדת שעל המסך עם השלט.<div class="cmdbox"><p class="cmdlab">דוגמה: הכתובת של המחשב שלכם, ואחריה /app/Nagenli.apk</p><code class="cmd" dir="ltr" lang="en">http://192.168.1.20:8686/app/Nagenli.apk</code></div></div><p class="see"><span class="lab">מה תראו</span>פס הורדה, ואז חלון התקנה.</p><div class="tip"><span class="lab">אם זה קורה</span><p><b>כתוב שהאפליקציה עוד לא שם?</b></p><p>Nagenli במחשב הותקן רק לפני דקות ועדיין מביא אותה. המתינו חמש דקות ונסו שוב, או הקלידו במקום זה את הכתובת הזו:<div class="cmdbox"><p class="cmdlab">הכתובת האחרת, אם בראשונה כתוב שהאפליקציה עוד לא שם</p><code class="cmd" dir="ltr" lang="en">quantumleapinco.github.io/nagenli-releases/Nagenli.apk</code></div></p></div></div></li><li><div class="sb"><h3>אפשרו ל־Downloader להתקין, אם הטלוויזיה שואלת</h3><div>בפעם הראשונה הטלוויזיה עשויה לסרב ולשאול אם לאפשר ל־Downloader להתקין אפליקציות. בחרו <b><bdi class="ui" lang="en" dir="ltr">Settings</bdi></b>, הפעילו את <b>Downloader</b> ברשימה וחזרו אחורה.</div><p class="see"><span class="lab">מה תראו</span>אתם חוזרים לחלון ההתקנה.</p><div class="tip"><span class="lab">אם זה קורה</span><p><b>הטלוויזיה סירבה?</b></p><p>זה רגיל בפעם הראשונה. מספיק להפעיל את Downloader פעם אחת.</p></div></div></li><li><div class="sb"><h3>בחרו Install</h3><div>בחרו <b><bdi class="ui" lang="en" dir="ltr">Install</bdi></b> ואז <b><bdi class="ui" lang="en" dir="ltr">Open</bdi></b>.</div><p class="see"><span class="lab">מה תראו</span>Nagenli נפתח בטלוויזיה ומחפש את המחשב לבד.</p></div></li><li><div class="sb"><h3>אם הוא מבקש צימוד, סרקו את קוד התמונה</h3><div>הטלוויזיה מציגה <b>קוד תמונה</b> (QR). בטלפון שכבר מחובר ל־Nagenli פתחו את המצלמה, כוונו אל הטלוויזיה, הקישו על הקישור ובחרו <b><bdi class="ui" lang="en" dir="ltr">Connect</bdi></b> ב־Nagenli. לא מקלידים כלום בטלוויזיה.</div><figure class="pic"><svg viewBox="0 0 330 200" role="img" aria-label="טלפון שמכוון אל קוד התמונה על מסך הטלוויזיה" focusable="false"><rect x="14" y="14" width="190" height="124" rx="10" fill="#0b0b0f" stroke="#8a8aa6" stroke-width="3"/><path d="M80 168h58M109 138v30" stroke="#8a8aa6" stroke-width="3" stroke-linecap="round"/><rect x="50" y="34" width="78" height="78" rx="6" fill="#ffffff"/><rect x="58" y="42" width="9" height="9" fill="#000"/><rect x="67" y="42" width="9" height="9" fill="#000"/><rect x="76" y="42" width="9" height="9" fill="#000"/><rect x="94" y="42" width="9" height="9" fill="#000"/><rect x="112" y="42" width="9" height="9" fill="#000"/><rect x="58" y="51" width="9" height="9" fill="#000"/><rect x="76" y="51" width="9" height="9" fill="#000"/><rect x="103" y="51" width="9" height="9" fill="#000"/><rect x="112" y="51" width="9" height="9" fill="#000"/><rect x="58" y="60" width="9" height="9" fill="#000"/><rect x="67" y="60" width="9" height="9" fill="#000"/><rect x="76" y="60" width="9" height="9" fill="#000"/><rect x="94" y="60" width="9" height="9" fill="#000"/><rect x="103" y="60" width="9" height="9" fill="#000"/><rect x="85" y="69" width="9" height="9" fill="#000"/><rect x="112" y="69" width="9" height="9" fill="#000"/><rect x="58" y="78" width="9" height="9" fill="#000"/><rect x="76" y="78" width="9" height="9" fill="#000"/><rect x="85" y="78" width="9" height="9" fill="#000"/><rect x="94" y="78" width="9" height="9" fill="#000"/><rect x="112" y="78" width="9" height="9" fill="#000"/><rect x="67" y="87" width="9" height="9" fill="#000"/><rect x="85" y="87" width="9" height="9" fill="#000"/><rect x="103" y="87" width="9" height="9" fill="#000"/><rect x="112" y="87" width="9" height="9" fill="#000"/><rect x="58" y="96" width="9" height="9" fill="#000"/><rect x="67" y="96" width="9" height="9" fill="#000"/><rect x="76" y="96" width="9" height="9" fill="#000"/><rect x="94" y="96" width="9" height="9" fill="#000"/><rect x="232" y="40" width="66" height="136" rx="14" fill="#16161f" stroke="#c4b2ff" stroke-width="3"/><circle cx="265" cy="54" r="5" fill="#c4b2ff"/><path d="M232 70L150 74M232 130L150 100" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 6" stroke-linecap="round"/></svg><figcaption>מצלמת הטלפון קוראת את קוד התמונה שבטלוויזיה.</figcaption></figure><p class="see"><span class="lab">מה תראו</span>הטלוויזיה מתחברת ומציגה את הספרייה שלכם.</p><div class="tip"><span class="lab">אם זה קורה</span><p><b>אין טלפון בהישג יד?</b></p><p>הקלידו במקום זה את <b>קוד צימוד</b> (<bdi class="en" lang="en" dir="ltr">pairing code</bdi>) בן שש הספרות. הוא מוצג ב־Nagenli במחשב, תחת <span class="path"><b>הגדרות</b> › <b>מכשירים וגישה</b> (<bdi class="en" lang="en" dir="ltr">Devices and access</bdi>)</span>. הוא תקף למכשיר אחד ולעשר דקות.</p></div></div></li></ol><h2>צפייה מחוץ לבית</h2><p>לא חובה. בבית אחר הטלוויזיה יכולה להגיע אל המחשב שלכם דרך האינטרנט.</p><ol class="steps" role="list" start="1" style="counter-reset:s 0"><li><div class="sb"><h3>במחשב, הפעילו את <b>צפייה מכל מקום</b> (<bdi class="en" lang="en" dir="ltr">Watch from anywhere</bdi>)</h3><div>פתחו את <span class="path"><b>הגדרות</b> › <b>מכשירים וגישה</b></span> של Nagenli והפעילו את <b>צפייה מכל מקום</b>.</div><p class="see"><span class="lab">מה תראו</span>המתינו עד שכתוב <b>מוכן</b> (<bdi class="en" lang="en" dir="ltr">Ready</bdi>). מתחתיו מופיע <b>קוד חיבור</b> (<bdi class="en" lang="en" dir="ltr">connect code</bdi>), למשל <code dir="ltr" lang="en">K7Q-4M2-X9T</code>.</p></div></li><li><div class="sb"><h3>בטלוויזיה, פתחו את Nagenli והקלידו את קוד החיבור</h3><div>כשהוא לא מוצא את המחשב, הקלידו את <b>קוד חיבור</b> בתיבה ובחרו <b><bdi class="ui" lang="en" dir="ltr">Connect</bdi></b>.</div><p class="see"><span class="lab">מה תראו</span>הטלוויזיה מבקשת צימוד ומציגה <b>קוד תמונה</b> (QR).</p></div></li><li><div class="sb"><h3>סרקו את קוד התמונה בטלפון מחובר</h3><div>הדרך הקלה: בטלפון שכבר מחובר ל־Nagenli פתחו את המצלמה, כוונו אל התמונה בטלוויזיה, הקישו על הקישור ובחרו <b><bdi class="ui" lang="en" dir="ltr">Connect</bdi></b> ב־Nagenli. לא מקלידים כלום בטלוויזיה.</div><div class="tip"><span class="lab">אם זה קורה</span><p><b>אין טלפון?</b></p><p>הקלידו במקום זה את <b>קוד צימוד</b> בן שש הספרות. הוא נמצא ב<span class="path"><b>הגדרות</b> › <b>מכשירים וגישה</b></span> של Nagenli במחשב.</p></div></div></li></ol><p>אף פעם לא תראו ולא תקלידו את כתובת המחשב, ואם ספק האינטרנט משנה אותה, הטלוויזיה תמצא את המחשב שוב לבד.</p><h2>עדכונים</h2><p>מה שרואים ב־Shield (הספרייה, הנגן, החיפוש) מגיע מהמחשב ותמיד מעודכן. האפליקציה עצמה משתנה לעיתים רחוקות. ל־Shield אין דפדפן, ולכן כדי לעדכן את האפליקציה חוזרים על שלב Downloader (מקלידים שוב את אותה כתובת): האפליקציה החדשה מותקנת מעל הישנה ושום דבר לא הולך לאיבוד.</p><section class="stuck" aria-labelledby="stuck"><h2 id="stuck">נתקעתם? זה בסדר, זה קורה</h2><details><summary>ה־Shield לא מתקין את האפליקציה</summary><div><p>צריך לומר ל־Shield פעם אחת ש־Downloader רשאי להתקין אפליקציות. ברוב מכשירי ה־Shield: <b><bdi class="ui" lang="en" dir="ltr">Settings</bdi></b>, <b><bdi class="ui" lang="en" dir="ltr">Device Preferences</bdi></b>, <b><bdi class="ui" lang="en" dir="ltr">Security &amp; restrictions</bdi></b>, <b><bdi class="ui" lang="en" dir="ltr">Unknown sources</bdi></b>, והפעילו את <b><bdi class="ui" lang="en" dir="ltr">Downloader</bdi></b>. התפריטים שונים מעט בין גרסאות, אז אם השמות לא זהים בדיוק חפשו “<bdi class="en" lang="en" dir="ltr">Unknown sources</bdi>”. אחר כך בחרו שוב <b><bdi class="ui" lang="en" dir="ltr">Install</bdi></b>.</p></div></details><details><summary>ב־Downloader כתוב שהאפליקציה עוד לא שם</summary><div><p>Nagenli במחשב הותקן רק לפני דקות ועדיין מביא אותה. המתינו חמש דקות ונסו שוב, או הקלידו במקום זה <code dir="ltr" lang="en">quantumleapinco.github.io/nagenli-releases/Nagenli.apk</code>.</p></div></details><details><summary>Nagenli ב־Shield לא מוצא את המחשב</summary><div><p>ודאו שהמחשב דלוק ו־Nagenli פועל בו, ושה־Shield באותה רשת ביתית (Wi-Fi או כבל). בבית אחר השתמשו בקוד התמונה או בקוד החיבור (ראו “צפייה מחוץ לבית” למעלה).</p></div></details><div class="note"><span class="lab">מבקשים עזרה</span><p>שום דבר מזה לא עזר? שלחו הודעה למי שהזמין אתכם ל־Nagenli. כתבו <b>באיזה שלב אתם</b>, וצרפו <b>צילום של המסך</b> (של הטלוויזיה, אם היא זו שנתקעה; מספיק צילום בטלפון).</p></div></section></div>
+</div></main>
+<footer><div class="wrap"><span>Nagenli: הספרייה שלכם, בכל מסך. פשוט לוחצים על ניגון.</span></div></footer>
+<script>(function () {
+  var d = document, root = d.documentElement;
+  root.className += ' js';
+  var live = d.getElementById('live');
+  function say(t) { if (live) { live.textContent = ''; setTimeout(function () { live.textContent = t; }, 30); } }
+  function pick(el) { var r = d.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+  function old(text, el) {
+    var ta = d.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    d.body.appendChild(ta); ta.select(); var ok = false;
+    try { ok = d.execCommand('copy'); } catch (e) { ok = false; }
+    d.body.removeChild(ta); return ok;
+  }
+  var buttons = d.querySelectorAll('[data-copy]');
+  for (var i = 0; i < buttons.length; i++) (function (b) {
+    var label = b.querySelector('.cl'), first = label.textContent, timer;
+    b.addEventListener('click', function () {
+      var el = d.getElementById(b.getAttribute('data-copy')), text = el.textContent.trim();
+      function good() { label.textContent = b.getAttribute('data-done'); b.className += ' done'; say(b.getAttribute('data-done')); clearTimeout(timer); timer = setTimeout(function () { label.textContent = first; b.className = b.className.replace(' done', ''); }, 3000); }
+      function bad() { pick(el); say(b.getAttribute('data-select')); label.textContent = b.getAttribute('data-select'); clearTimeout(timer); timer = setTimeout(function () { label.textContent = first; }, 6000); }
+      if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(good, function () { old(text, el) ? good() : bad(); }); }
+      else if (old(text, el)) good(); else bad();
+    });
+  })(buttons[i]);
+  var opened = [];
+  window.addEventListener('beforeprint', function () { var x = d.querySelectorAll('details'); opened = []; for (var i = 0; i < x.length; i++) { opened.push(x[i].open); x[i].open = true; } });
+  window.addEventListener('afterprint', function () { var x = d.querySelectorAll('details'); for (var i = 0; i < x.length && i < opened.length; i++) x[i].open = opened[i]; });
+})();</script>
+</body>
+</html>
